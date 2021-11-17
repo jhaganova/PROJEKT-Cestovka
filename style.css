@@ -28,7 +28,7 @@ body {
 @media screen and (min-width: 768px) {
     .header {
         flex-direction: row;
-        align-items: stretch;
+        align-items: center;
         justify-content: space-between;
     }
 }
@@ -57,6 +57,32 @@ body {
 }
 
 
+/* line */
+
+.header__line::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #F03000;
+    margin: 10px 0;
+}
+
+
+/* logo */
+
+.header__logo {
+    margin-top: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .header__logo {
+        margin: 0px;
+        margin-left: 20px;
+    }
+}
+
+
 
 /* section */
 
@@ -64,10 +90,11 @@ body {
     margin-bottom: 40px;
 }
 
-.section__header {
+.section__subheader {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 24px;
+    margin: 20px 0;
 }
 
 
@@ -122,15 +149,9 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     padding: 20px;
-}
-
-.phototrips__content--big {
     min-height: calc(100% - 40px);
 }
 
-.phototrips__content--small {
-    min-height: calc(100% - 40px);
-}
 
 
 .phototrips__price {
@@ -145,11 +166,14 @@ body {
 
 .phototrips__header--big {
     font-size: 28px;
-    margin-bottom: 20px;
 }
 
 .phototrips__header--small {
     font-size: 20px;
+}
+
+.phototrips__description {
+    margin-top: 20px;
 }
 
 
@@ -294,6 +318,58 @@ body {
 
 
 
-/* """"""""""""""""""""""""" */
-/* !!doplň ALT k obrázkom!! */
-/* """"""""""""""""""""""" */
+/* textpage */
+
+.textpage__main-header {
+    color: #F03000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    margin: 30px 0;
+}
+
+.textpage__paragraph {
+    margin: 0;
+}
+
+.textpage__paragraph + .textpage__paragraph {
+    margin-top: 15px;
+}
+
+.textpage__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 40px 0;
+}
+
+/* textpage last minute phototrips */
+
+.phototrips--textpage {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 150px);
+    gap: 20px;
+}
+
+.phototrips-textpage__description {
+    display: none;
+}
+
+
+@media screen and (min-width: 768px) {
+    .phototrips--textpage {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 380px 180px;
+    }
+
+    .phototrips__textpage-link--big {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    .phototrips-textpage__description {
+        display: inline-block;
+    }
+    
+
+}
