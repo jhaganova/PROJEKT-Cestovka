@@ -267,17 +267,22 @@ body {
     }
 }
 
+.news__link {
+    text-decoration: none;
+    display: flex;
+}
+
 .news__box {
     background-color: #F0F0F0;
     padding: 20px;
 }
 
-.news__box + .news__box {
+.news__link + .news__link {
     margin-top: 20px;
 }
 
 @media screen and (min-width: 960px) {
-    .news__box + .news__box {
+    .news__link + .news__link {
         margin-top: 0;
     }
 }
@@ -298,6 +303,7 @@ body {
 .news__text {
     font-family: 'Montserrat', sans-serif;
     margin: 0px;
+    color: #000;
 }
 
 
@@ -316,6 +322,10 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+
+
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 
 /* textpage */
@@ -344,7 +354,7 @@ body {
 
 /* textpage last minute phototrips */
 
-.phototrips--textpage {
+.phototrips-textpage {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 150px);
@@ -357,12 +367,12 @@ body {
 
 
 @media screen and (min-width: 768px) {
-    .phototrips--textpage {
+    .phototrips-textpage {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 380px 180px;
     }
 
-    .phototrips__textpage-link--big {
+    .phototrips-textpage__link--big {
         grid-column: span 2;
         grid-row: span 1;
     }
@@ -370,6 +380,32 @@ body {
     .phototrips-textpage__description {
         display: inline-block;
     }
-    
+}
 
+@media screen and (min-width: 960px){
+    .phototrips-textpage {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 180px);
+    }
+
+    .phototrips-textpage__link--big {
+        grid-column: span 1;
+    }
+
+    .phototrips-textpage__description {
+        display: none;
+    }
+}
+
+
+
+/* PC two columns */
+
+@media screen and (min-width: 960px) {
+    .grid-two-columns {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto;
+        gap: 20px;
+    }
 }
