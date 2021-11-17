@@ -5,12 +5,24 @@ body {
     box-sizing: border-box;
 }
 
+
+/* header */
+
 .header {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
+
+@media screen and (min-width: 768px) {
+    .header {
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+}
+
 
 .header__menu {
     list-style: none;
@@ -35,6 +47,7 @@ body {
 }
 
 
+
 /* section */
 
 .section {
@@ -55,6 +68,17 @@ body {
     grid-template-columns: auto;
     grid-template-rows: minmax(240px, auto) repeat(2, minmax(150px, auto));
     gap: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .phototrips {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: minmax(380px, auto) minmax(180px, auto);
+    }
+
+    .phototrips__link--big {
+        grid-column: span 2;
+    }
 }
 
 .phototrips__link {
@@ -110,18 +134,47 @@ body {
 
 /* features */
 
+@media screen and (min-width: 768px) {
+    .feature {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
 .feature__box {
     background-color: #F0F0F0;
     padding: 20px;
     display: flex;
 }
 
+@media screen and (min-width: 768px) {
+    .feature__box {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
 .feature__box + .feature__box {
     margin-top: 10px;
 }
 
+@media screen and (min-width: 768px) {
+    .feature__box + .feature__box {
+        margin-top: 0;
+    }
+}
+
 .feature__text {
     margin-left: 30px;
+}
+
+@media screen and (min-width: 768px) {
+    .feature__text {
+        margin: 0;
+    }
 }
 
 .feature__header {
@@ -130,6 +183,12 @@ body {
     color: #F03000;
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
+}
+
+@media screen and (min-width: 768px) {
+    .feature__header {
+        margin: 20px 0;
+    }
 }
 
 .feature__description {
@@ -188,3 +247,8 @@ body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
 }
+
+
+/* """"""""""""""""""""""""" */
+/* !!doplň ALT k obrázkom!! */
+/* """"""""""""""""""""""" */
