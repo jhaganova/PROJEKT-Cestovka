@@ -1,8 +1,18 @@
 body {
-    margin: 20px;
     font-family: 'Open Sans', Calibri;
     font-size: 16px;
     box-sizing: border-box;
+    margin: auto;
+}
+
+@media screen and (min-width: 960px) {
+    body {
+        max-width: 1180px;
+    }
+}
+
+.content {
+    padding: 20px;
 }
 
 
@@ -73,11 +83,23 @@ body {
 @media screen and (min-width: 768px) {
     .phototrips {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: minmax(380px, auto) minmax(180px, auto);
+        grid-template-rows: repeat(2, 180px);
     }
 
     .phototrips__link--big {
         grid-column: span 2;
+        grid-row: span 2;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .phototrips {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .phototrips__big--right {
+        grid-column: 2 / span 2;
+        grid-row: 1 / span 2;
     }
 }
 
@@ -143,6 +165,13 @@ body {
     }
 }
 
+@media screen and (min-width: 960px) {
+    .feature {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+    }
+}
+
 .feature__box {
     background-color: #F0F0F0;
     padding: 20px;
@@ -205,6 +234,15 @@ body {
 
 /* news */
 
+@media screen and (min-width: 960px) {
+    .news {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        gap: 20px;
+    }
+}
+
 .news__box {
     background-color: #F0F0F0;
     padding: 20px;
@@ -212,6 +250,12 @@ body {
 
 .news__box + .news__box {
     margin-top: 20px;
+}
+
+@media screen and (min-width: 960px) {
+    .news__box + .news__box {
+        margin-top: 0;
+    }
 }
 
 .news__date {
@@ -247,6 +291,7 @@ body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
 }
+
 
 
 /* """"""""""""""""""""""""" */
