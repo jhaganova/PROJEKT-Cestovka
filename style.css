@@ -47,7 +47,7 @@ body {
     margin: 50px 0;
 }
 
-.header__menu a {
+.header__link {
     text-decoration: none;
     color: #F03000;
     font-family: 'Montserrat', sans-serif;
@@ -55,8 +55,8 @@ body {
     padding: 20px;
 }
 
-.header__menu a:active,
-.header__menu a:hover {
+.header__link:active,
+.header__link:hover {
     background-color: #F03000;
     color: #fff;
 }
