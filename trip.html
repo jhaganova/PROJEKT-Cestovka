@@ -31,7 +31,12 @@
 
 <!-- trip picture -->
                 <div class="trip-section trip-section__header-image trip-section--no-pc-margin grid-two-columns__left-column">
-                    <img class="phototrips__image" src="images/palmy.png" alt="Palmy a pláž">
+
+                    <picture class="phototrips__image">
+                        <source media="(min-width:768px)" srcset="images/palmy@2x.png">
+                        <img class="phototrips__image" src="images/palmy.png" alt="Palmy a pláž">
+                    </picture>
+
                     <div class="phototrips__content">
                         <div class="phototrips__price phototrips__price--hidden">
                             17 600 Kč
