@@ -15,8 +15,13 @@ body {
     padding: 20px;
 }
 
+@media screen and (min-width: 1200px) {
+    .content {
+        padding: 20px 0;
+    }
+}
 
-/* header */
+/* header n menu */
 
 .header {
     display: flex;
@@ -406,6 +411,148 @@ body {
         display: grid;
         grid-template-columns: 2fr 1fr;
         grid-template-rows: auto;
+        column-gap: 20px;
+        row-gap: 40px;
+    }
+
+    .section__subheader--30px-top-margin {
+        margin-top: 30px;
+    }
+}
+
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+/* trip page */
+
+.trip-section {
+    margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+    .trip-section {
+        margin-bottom: 40px;
+    }
+}
+
+.trip-section__header-image {
+    display: flex;
+    position: relative;
+}
+
+@media screen and (min-width: 768px) {
+    .trip-section__header-image {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .trip-section__header-image {
+        margin-top: 0;
+    }
+
+    .trip-section--no-pc-margin {
+        margin: 0;
+    }
+}
+
+.phototrips__price--hidden {
+    visibility: hidden;
+}
+
+
+/* reservation info box */
+
+@media screen and (min-width: 768px) {
+    .reservation-details {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         gap: 20px;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .reservation-details {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+}
+
+
+.reservation-details__box {
+    display: flex;
+    background-color: #E5E5E5;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.reservation-details__box + .reservation-details__box {
+    margin-top: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .reservation-details__box + .reservation-details__box {
+        margin-top: 0;
+    }
+}
+
+
+.reservation-details__title {
+    text-transform: uppercase;
+    color: #888888;
+    font-size: 14px;
+    margin: 0 0 6px 0;
+}
+
+.reservation-details__info {
+    margin: 0;
+}
+
+
+.price-box__price {
+    color: #FFFFFFB2;
+}
+
+.price-box__info {
+    color: #FFFFFF;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.reservation-details__box--orange-bg {
+    background-color: #F03000;
+}
+
+
+/* extra hotel photos */
+
+.hotel-photos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .hotel-photos {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+    }
+}
+
+.hotel-photos__photo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .trip-footer {
+        margin-bottom: 10px;
     }
 }
